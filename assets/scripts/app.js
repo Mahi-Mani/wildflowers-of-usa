@@ -32,9 +32,11 @@ $(document).ready(function () {
 
   function renderHtml(color) {
     var location = window.location.href;
-    if(location.includes("github"))
-    window.location.href = "https://mahi-mani.github.io/wildflowers-of-usa/"+color+".html";
+    if (location.includes("github")) {
+      console.log("Inside")
+      window.location.href = "https://mahi-mani.github.io/wildflowers-of-usa/" + color + ".html";
+    }
     else
-    window.location.href = "file:///D:/wildflowers-of-usa/" + color + ".html";
+      window.location.href = "file:///D:/wildflowers-of-usa/" + color + ".html";
   }
 })
