@@ -23,17 +23,17 @@ $(document).ready(function () {
   };
 
   // Grab id of each flower
-  $(".flower").on("click", function (event) {
-    event.preventDefault();
-    console.log(this.id);
-    color = this.id;
-    renderHtml(color);
-  });
+  // $(".flower").on("click", function (event) {
+  //   event.preventDefault();
+  //   console.log(this.id);
+  //   color = this.id;
+  //   renderHtml(color);
+  // });
 
   function renderHtml(color) {
     var location = window.location.href;
     // if(location.includes("github"))
-    window.location.href = "https://mahi-mani.github.io/wildflowers-of-usa/"+color+".html";
+    window.location.href = color+".html";
     // else
     // window.location.href = "file:///D:/wildflowers-of-usa/" + color + ".html";
   }
