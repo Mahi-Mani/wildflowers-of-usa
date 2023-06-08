@@ -2325,7 +2325,6 @@ $(document).ready(function () {
       ]
     }];
     var layout = {
-      title: 'Distribution of White flowers',
       color: "red",
       paper_bgcolor: "rgba(0,0,0,0)",
       plot_bgcolor: "lightblue",

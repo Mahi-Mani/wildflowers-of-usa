@@ -3627,7 +3627,6 @@ $(document).ready(function () {
       ]
     }];
     var layout = {
-      title: 'Distribution of Yellow flowers',
       color: "red",
       paper_bgcolor: "rgba(0,0,0,0)",
       plot_bgcolor: "lightblue",

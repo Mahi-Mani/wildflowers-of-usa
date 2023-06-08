@@ -255,7 +255,6 @@ $(document).ready(function () {
       ]
     }];
     var layout = {
-      title: 'Distribution of Red flowers',
       color: "Green",
       paper_bgcolor: "rgba(0,0,0,0)",
       plot_bgcolor: "lightblue",

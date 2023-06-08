@@ -31,6 +31,10 @@ $(document).ready(function () {
   });
 
   function renderHtml(color) {
-    window.location.href = "file:///D:/SCU/01-Data%20Viz/Project/" + color + ".html";
+    var location = window.location.href;
+    if(location.includes("github"))
+    window.location.href = "https://mahi-mani.github.io/wildflowers-of-usa/"+color+".html";
+    else
+    window.location.href = "file:///D:/wildflowers-of-usa/" + color + ".html";
   }
 })

@@ -313,7 +313,6 @@ $(document).ready(function () {
       ]
     }];
     var layout = {
-      title: 'Distribution of Orange flowers',
       color: "orange",
       paper_bgcolor: "rgba(0,0,0,0)",
       plot_bgcolor: "lightblue",
@@ -410,7 +409,7 @@ $(document).ready(function () {
       if (stateArr[i].length == 2) {
         console.log(stateArr[i]);
         $("#" + stateArr[i]).css({
-          "fill": "#FFD700"
+          "fill": "rgb(255, 96, 41)"
         });
       }
     }
@@ -436,13 +435,11 @@ $(document).ready(function () {
   </ol>`);
 
     var rankObj = [];
-    var randomID = Math.floor(Math.random() * 10);
 
     for (var i = 0; i < orangedata.length; i++) {
       // Same zone, leaf type and family
       if ((i !== id - 1 && orangedata[i].Zone == zone && orangedata[i].Leaf == orangedata[id - 1].Leaf && orangedata[i].Family == familyName) || orangedata[i].Zone === previousZone) {
         if (!displayFlowers1.includes(orangedata[i].Image)) {
-          console.log("Inside if condirion");
           rankObj.push({
             "rank": 1,
             "id": orangedata[i].ID,
@@ -484,22 +481,18 @@ $(document).ready(function () {
       return 0;
     }
     rankObj.sort(compare);
-    console.log(displayName);
-    console.log(displayIdArr);
-    console.log(displayFlowers);
+    console.log(rankObj);
     {
       $(".ex-flower").each(function (i, obj) {
-        // if (rankObj.length == 0) {
-          console.log("Inside if loop");
-          console.log(displayFlowers[i]);
-          $(obj).attr("src", displayFlowers[i]);
-          $(obj).attr("id", displayIdArr[i]);
-        // }
+        if (rankObj[i].name != undefined) {
+          $(obj).attr("src", rankObj[i].image);
+          $(obj).attr("id", rankObj[i].id);
+        }
       })
 
       $(".text").each(function (i, obj) {
-        $(obj).text(displayName[i]);
-        $(obj).attr("id", displayIdArr[i]);
+        $(obj).text(rankObj[i].name);
+        $(obj).attr("id", rankObj[i].id);
       })
     }
   }

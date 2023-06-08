@@ -1408,14 +1408,14 @@ $(document).ready(function () {
       ]
     }];
     var layout = {
-      title: 'Distribution of Red flowers',
       color: "red",
       paper_bgcolor: "rgba(0,0,0,0)",
       // plot_bgcolor: "lightblue",
       geo: {
         scope: 'usa'
       },
-      font: 'rgb(0,0,0,0)'
+      font: 'rgb(0,0,0,0)',
+      color: "white"
     };
 
     Plotly.newPlot("myDiv", data, layout, { showLink: false });
