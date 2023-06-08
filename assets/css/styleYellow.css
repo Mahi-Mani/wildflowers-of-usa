@@ -1,0 +1,192 @@
+body {
+  background-color: #2470a0;
+}
+
+.heading,.link {
+  color: #FFD700;
+  text-shadow: 1px 1px 1px #FFD700;
+}
+
+/* Tableau Code */
+iframe {
+  position: relative;
+  left:-400px;
+  width: 1700px;
+  height: 2000px;
+  -webkit-transform: scale(0.50);
+  -moz-transform: scale(0.50);
+  -o-transform: scale(0.50);
+  transform: scale(0.50);
+}
+
+#viz1686081324686,
+#viz1686081480557,
+#viz1686081549663,
+#viz1686092431215,
+#viz1686091724442 {
+  position: relative; 
+  left: 300px; 
+  width: 50%; 
+  height: 850px; 
+  overflow: hidden;
+
+
+  /* width: 1600px !important; */
+  top: -650px;
+  /* left: 50px; */
+  /* position: none !important; */
+  /* display: inline !important; */
+  height: 750px !important;
+}
+
+/* .tableauPlaceholder {
+  left: -150px;
+  top: -200px;
+} */
+
+.tableauPlaceholder{
+  /* z-index: -1; */
+}
+
+#name,
+#family,
+#zone {
+  color: #57385c;
+}
+
+
+h6,
+.cloroplethHead {
+  color: #FFD700;
+}
+
+.cloroplethHead {
+  top: 700px;
+}
+
+.flower {
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px black;
+  transition: transform .2s;
+  height: 80px;
+  width: 80px;
+}
+
+.ex-flower {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 5px 5px 5px #111;
+  box-shadow: 5px 5px 5px #111;
+}
+
+.ex-flower:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.pic_transform {
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  overflow: hidden;
+  height: 0px;
+}
+
+.picture {
+  margin-top: -85%;
+  position: relative;
+}
+
+.headtext {
+  margin-top: -550px;
+  color: #FFD700;
+  position: relative;
+}
+
+.picture:hover .pic_transform {
+  height: 50px;
+}
+
+#myDiv {
+  width: 500px;
+  height: 500px;
+  background-color: #2470a0;
+  /* z-index: 0; */
+}
+
+.svg-container {
+  left: -100px;
+  color: yellow !important;
+}
+
+rect {
+  fill: #2470a0 !important;
+  /* fill-opacity: 1; */
+}
+
+.text_display {
+  transform-origin: top;
+  transition-duration: 0.5s;
+  -webkit-transform-origin: top;
+  -webkit-transition-duration: 0.5s;
+  -moz-transform-origin: top;
+  -moz-transition-duration: 0.5s;
+  -o-transform-origin: top;
+  -o-transition-duration: 0.5s;
+  font-size: 16px;
+  font-family: Arial;
+  font-weight: normal;
+  text-align: center;
+  color: #FFF;
+}
+
+.picture:hover .text_display {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin-top: 10%;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  margin-top: 25%;
+}
+
+#us-map1,
+.mapspace {
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  width: 50%;
+  height: 50%;
+}
+
+#plantDetails {
+  top: 40%;
+  left: 0%;
+  position: relative;
+  /* display: block; */
+}
+
+
+path:hover {
+  fill: #57385c !important;
+  cursor: pointer;
+  transform: scale(1.005, 1.005);
+}
+
+.flower:hover {
+  transform: scale(1.5);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  cursor: pointer;
+}
