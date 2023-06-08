@@ -1,5 +1,5 @@
 body {
-  background-color: #2470a0;
+  background-color: #86C6F4;
   overflow: hidden;
 }
 
@@ -116,7 +116,7 @@ h6,
 #myDiv {
   width: 500px;
   height: 500px;
-  background-color: #2470a0;
+  background-color: #86C6F4;
   /* z-index: 0; */
 }
 
@@ -126,7 +126,7 @@ h6,
 }
 
 rect {
-  fill: #2470a0 !important;
+  fill: #86C6F4 !important;
   /* fill-opacity: 1; */
 }
 
