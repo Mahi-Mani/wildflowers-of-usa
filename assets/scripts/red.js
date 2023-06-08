@@ -1386,6 +1386,27 @@ $(document).ready(function () {
     }
   ]
 
+  // Map details
+  var detailsBox = document.getElementById('details-box');
+
+  document.addEventListener('mouseover', function (e) {
+    if (e.target.tagName == 'path') {
+      var content = e.target.dataset.name;
+      detailsBox.innerHTML = content;
+      detailsBox.style.opacity = "100%";
+    }
+    else {
+      detailsBox.style.opacity = "0%";
+    }
+  });
+
+  window.onmousemove = function (e) {
+    var x = e.clientX,
+      y = e.clientY;
+    detailsBox.style.top = (y + 20) + 'px';
+    detailsBox.style.left = (x) + 'px';
+  };
+
   // Choropleth map code
   d3.csv('https://raw.githubusercontent.com/Mahi-Mani/projectdv/main/Color_State_data.csv', function (err, rows) {
     function unpack(rows, key) {
@@ -1489,10 +1510,6 @@ $(document).ready(function () {
       $(".headtext").css("top", "400px");
     }
 
-    // $(".headtext").css({
-    //   "margin-top": "5%"
-    // })
-    // removeMapStyle();
     $("path").removeAttr("style");
     $("path").css({
       "stroke-width": 0.97063118000000004,

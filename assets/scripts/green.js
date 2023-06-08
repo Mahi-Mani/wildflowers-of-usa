@@ -12,7 +12,7 @@ $(document).ready(function () {
   vizElement.style.height = '850px';
 
   var scriptElement = document.createElement('script');
-  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
   vizElement.parentNode.insertBefore(scriptElement, vizElement);
 
   const greendata = [
@@ -232,7 +232,29 @@ $(document).ready(function () {
       "Family": "Arrowgrass Family",
       "state": "AZ CO NM UT"
     }
-   ]
+  ]
+
+  // Map details
+  var detailsBox = document.getElementById('details-box');
+
+  document.addEventListener('mouseover', function (e) {
+    if (e.target.tagName == 'path') {
+      var content = e.target.dataset.name;
+      detailsBox.innerHTML = content;
+      detailsBox.style.opacity = "100%";
+    }
+    else {
+      detailsBox.style.opacity = "0%";
+    }
+  });
+
+  window.onmousemove = function (e) {
+    var x = e.clientX,
+      y = e.clientY;
+    detailsBox.style.top = (y + 20) + 'px';
+    detailsBox.style.left = (x) + 'px';
+  };
+
   // Choropleth map code
   d3.csv('https://raw.githubusercontent.com/Mahi-Mani/projectdv/main/Color_State_data.csv', function (err, rows) {
     function unpack(rows, key) {

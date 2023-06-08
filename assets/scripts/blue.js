@@ -1033,6 +1033,28 @@ $(document).ready(function () {
       "state": "AZ CO NM UT"
     }
    ]
+
+  // Map details
+  var detailsBox = document.getElementById('details-box');
+
+  document.addEventListener('mouseover', function (e) {
+    if (e.target.tagName == 'path') {
+      var content = e.target.dataset.name;
+      detailsBox.innerHTML = content;
+      detailsBox.style.opacity = "100%";
+    }
+    else {
+      detailsBox.style.opacity = "0%";
+    }
+  });
+
+  window.onmousemove = function (e) {
+    var x = e.clientX,
+      y = e.clientY;
+    detailsBox.style.top = (y + 20) + 'px';
+    detailsBox.style.left = (x) + 'px';
+  };
+
   // Choropleth map code
   d3.csv('https://raw.githubusercontent.com/Mahi-Mani/projectdv/main/Color_State_data.csv', function (err, rows) {
     function unpack(rows, key) {
@@ -1152,7 +1174,7 @@ $(document).ready(function () {
       if (stateArr[i].length == 2) {
         console.log(stateArr[i]);
         $("#" + stateArr[i]).css({
-          "fill": "#FF033E"
+          "fill": "#00308F"
         });
       }
     }
