@@ -120,6 +120,15 @@ h6,
   height: 0px;
 }
 
+.map-header {
+  top: 20%;
+  position: relative;
+}
+
+i {
+  color: #FF033E;
+}
+
 .picture {
   margin-top: -90%;
   position: relative;
@@ -186,14 +195,14 @@ rect {
 .mapspace {
   display: block;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 0%;
   width: 50%;
   height: 50%;
 }
 
 #plantDetails {
-  top: 40%;
+  top: 20%;
   left: 0%;
   position: relative;
   /* display: block; */

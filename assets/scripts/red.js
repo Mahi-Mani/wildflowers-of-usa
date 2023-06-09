@@ -1498,16 +1498,17 @@ $(document).ready(function () {
     // $(".tableauPlaceholder1").show();
     var isUsmap = $("#us-map1").is(":visible");
     if (isUsmap) {
+      $(".map-header").html(`<h4>Distribution of <i>${reddata[id - 1].Name}</i></h4>`);
       $(".mapspace").css("height", "50%");
       $(".mapspace").css("width", "70%");
       $("#us-map1").css("height", "75%");
       // $(".text_display").css("top","-2000px");
       $(".content").removeAttr("style");
       // $(".ex-flower").removeAttr("style");
-      $(".content").css("margin-top", "20%");
+      $(".content").css("margin-top", "10%");
       $(".picture").css("margin-top", "0%");
       $(".headtext").css("margin-top", "0%");
-      $(".headtext").css("top", "400px");
+      $(".headtext").css("top", "450%");
     }
 
     $("path").removeAttr("style");
@@ -1543,6 +1544,7 @@ $(document).ready(function () {
         <h6>${reddata[id - 1].Family}</h6>
         <div class="fw-bold" id="name"><h4>Zone: </h4></div>
         <h6>${reddata[id - 1].Zone}</h6>
+        <img src=${reddata[id - 1].Image} width="150px" height="150px"/>
       </div>
     </li>
   </ol>`);
