@@ -1520,6 +1520,7 @@ $(document).ready(function () {
     console.log(id);
     var familyName = reddata[id - 1].Family;
     var zone = reddata[id - 1].Zone;
+    var image = reddata[id - 1].Image.split(" ").join("%20");
     var displayFlowers1 = [];
     var displayName1 = [];
     var displayIdArr = [];
@@ -1576,11 +1577,11 @@ $(document).ready(function () {
       <div class="ms-2 me-auto">
         <div class="fw-bold" id="name"><h4>Name: </h4></div>
         <h6>${reddata[id - 1].Name}</h6>
-        <div class="fw-bold" id="name"><h4>Family: </h4></div>
-        <h6>${reddata[id - 1].Family}</h6>
         <div class="fw-bold" id="name"><h4>Zone: </h4></div>
         <h6>${reddata[id - 1].Zone}</h6>
-        <img src=${reddata[id - 1].Image} width="150px" height="150px"/>
+        <div class="fw-bold" id="name"><h4>Family: </h4></div>
+        <h6>${reddata[id - 1].Family}</h6>
+        <img src=${image} width ="150px" height "150px"/>
       </div>
     </li>
   </ol>`);
