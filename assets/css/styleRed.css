@@ -3,7 +3,8 @@ body {
   overflow: hidden;
 }
 
-.heading, .link {
+.heading,
+.link {
   color: #FF033E;
   text-shadow: 1px 1px 1px #FF033E;
 }
@@ -27,7 +28,7 @@ body {
 /* Tableau Code */
 iframe {
   position: relative;
-  left:-400px;
+  left: -400px;
   background-color: transparent;
   width: 1700px;
   height: 2000px;
@@ -35,26 +36,32 @@ iframe {
   -moz-transform: scale(0.50);
   -o-transform: scale(0.50);
   transform: scale(0.50);
-  
+
 }
 
 #viz1686081324686,
 #viz1686081480557,
 #viz1686081549663 {
-  position: relative; 
-  left: 300px; 
-  width: 50%; 
-  height: 850px; 
+  position: relative;
+  left: 300px;
+  width: 50%;
+  height: 850px;
   overflow: hidden;
-
+  top: -650px;
+  padding-bottom: 5%;
 
   /* width: 1600px !important; */
-  top: -650px;
+  /* bottom: 100%; */
   /* left: 50px; */
   /* position: none !important; */
   /* display: inline !important; */
   height: 750px !important;
 }
+
+/* .dashboard-map {
+  position: relative;
+  top: 0%
+} */
 
 /* .tableauPlaceholder {
   left: -150px;
