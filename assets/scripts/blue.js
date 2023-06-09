@@ -1077,6 +1077,7 @@ $(document).ready(function () {
       ]
     }];
     var layout = {
+      title: '<b>Distribution of <i>Blue</i> flowers</b>',
       color: "red",
       paper_bgcolor: "rgba(0,0,0,0)",
       // plot_bgcolor: "lightblue",
@@ -1131,6 +1132,7 @@ $(document).ready(function () {
     console.log(id);
     var familyName = bluedata[id - 1].Family;
     var zone = bluedata[id - 1].Zone;
+    var image = bluedata[id - 1].Image.split(" ").join("%20");
     var displayFlowers1 = [];
     var displayName1 = [];
     var displayIdArr = [];
@@ -1142,26 +1144,22 @@ $(document).ready(function () {
     $(".mapspace").show();
     $("#details-box").show();
     $("#us-map1").show();
-    $("#plantDetails").show();
     // $(".tableauPlaceholder1").show();
     var isUsmap = $("#us-map1").is(":visible");
     if (isUsmap) {
+      $(".map-header").html(`<h4>Distribution of <i>${bluedata[id - 1].Name}</i></h4>`);
       $(".mapspace").css("height", "50%");
       $(".mapspace").css("width", "70%");
       $("#us-map1").css("height", "75%");
       // $(".text_display").css("top","-2000px");
       $(".content").removeAttr("style");
       // $(".ex-flower").removeAttr("style");
-      $(".content").css("margin-top", "20%");
+      $(".content").css("margin-top", "10%");
       $(".picture").css("margin-top", "0%");
       $(".headtext").css("margin-top", "0%");
-      $(".headtext").css("top", "400px");
+      $(".headtext").css("top", "450%");
     }
 
-    // $(".headtext").css({
-    //   "margin-top": "5%"
-    // })
-    // removeMapStyle();
     $("path").removeAttr("style");
     $("path").css({
       "stroke-width": 0.97063118000000004,
@@ -1183,7 +1181,7 @@ $(document).ready(function () {
     var previousZoneArr = JSON.parse(previousZone);
     zoneArr.push(zone);
     localStorage.setItem("zone", JSON.stringify(zoneArr));
-    $(".headtext").text(`More plants for you!`);
+    $(".headtext").text(`More wildflowers for you!`);
     $("#plantDetails").show();
     $("#plantDetails").empty();
     $("#plantDetails").append(`<ol class="list-group list-group-numbered">
@@ -1191,10 +1189,11 @@ $(document).ready(function () {
       <div class="ms-2 me-auto">
         <div class="fw-bold" id="name"><h4>Name: </h4></div>
         <h6>${bluedata[id - 1].Name}</h6>
-        <div class="fw-bold" id="name"><h4>Family: </h4></div>
-        <h6>${bluedata[id - 1].Family}</h6>
         <div class="fw-bold" id="name"><h4>Zone: </h4></div>
         <h6>${bluedata[id - 1].Zone}</h6>
+        <div class="fw-bold" id="name"><h4>Family: </h4></div>
+        <h6>${bluedata[id - 1].Family}</h6>
+        <img src=${image} width ="150px" height "150px"/>
       </div>
     </li>
   </ol>`);
@@ -1235,6 +1234,7 @@ $(document).ready(function () {
       }
     }
     // Sort object based on ranking
+    console.log(rankObj);
     function compare(a, b) {
       if (a.rank < b.rank) {
         return -1;
@@ -1246,7 +1246,6 @@ $(document).ready(function () {
     }
     rankObj.sort(compare);
     console.log(rankObj);
-    // $(".ex-flower").show();
     {
       $(".ex-flower").each(function (i, obj) {
         if (rankObj[i].name != undefined) {

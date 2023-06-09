@@ -1,9 +1,10 @@
 body {
-  background-color: #2470a0;
-  overflow: hidden;
+  background-color: #86C6F4;
+  /* overflow: hidden; */
 }
 
-.heading,.link {
+.heading,
+.link {
   color: #FFD700;
   text-shadow: 1px 1px 1px #FFD700;
 }
@@ -27,43 +28,43 @@ body {
 /* Tableau Code */
 iframe {
   position: relative;
-  left:-400px;
+  left: -400px;
+  background-color: transparent;
   width: 1700px;
   height: 2000px;
   -webkit-transform: scale(0.50);
   -moz-transform: scale(0.50);
   -o-transform: scale(0.50);
   transform: scale(0.50);
+
 }
 
 #viz1686081324686,
 #viz1686081480557,
-#viz1686081549663,
-#viz1686092431215,
-#viz1686091724442 {
-  position: relative; 
-  left: 300px; 
-  width: 50%; 
-  height: 850px; 
+#viz1686081549663 {
+  position: relative;
+  left: 36%;
+  width: 50%;
   overflow: hidden;
-
+  top: -700px;
 
   /* width: 1600px !important; */
-  top: -650px;
+  /* bottom: 100%; */
   /* left: 50px; */
   /* position: none !important; */
   /* display: inline !important; */
-  height: 750px !important;
+  height: 650px !important;
 }
+
+/* .dashboard-map {
+  position: relative;
+  top: 0%
+} */
 
 /* .tableauPlaceholder {
   left: -150px;
   top: -200px;
 } */
-
-.tableauPlaceholder{
-  /* z-index: -1; */
-}
 
 #name,
 #family,
@@ -118,13 +119,23 @@ h6,
   height: 0px;
 }
 
+.map-header {
+  top: 20%;
+  position: relative;
+}
+
+i {
+  color: #FFD700;
+}
+
 .picture {
-  margin-top: -85%;
+  margin-top: -80%;
   position: relative;
 }
 
 .headtext {
-  margin-top: -550px;
+  top: -1040%;
+  position: relative;
   color: #FFD700;
   position: relative;
 }
@@ -134,19 +145,20 @@ h6,
 }
 
 #myDiv {
-  width: 500px;
+  width: 130%;
   height: 500px;
-  background-color: #2470a0;
+  background-color: #86C6F4;
   /* z-index: 0; */
 }
 
 .svg-container {
-  left: -100px;
-  color: yellow !important;
+  left: -20%;
+  /* color: red !important; */
 }
 
 rect {
-  fill: #2470a0 !important;
+  fill: #86C6F4 !important;
+  color: #86C6F4 !important;
   /* fill-opacity: 1; */
 }
 
@@ -176,25 +188,32 @@ rect {
 
 .content {
   margin-top: 25%;
+  padding-top: 5%;
 }
 
 #us-map1,
 .mapspace {
   display: block;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 0%;
   width: 50%;
   height: 50%;
 }
 
 #plantDetails {
-  top: 40%;
+  top: 20%;
   left: 0%;
   position: relative;
   /* display: block; */
 }
 
+/* path {
+  stroke: white;
+  fill: #ffcbcb !important;
+  transition: fill .4s ease;
+  transform-origin: center center;
+} */
 
 path:hover {
   fill: #57385c !important;

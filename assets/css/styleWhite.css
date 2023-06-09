@@ -1,5 +1,5 @@
 body {
-  background-color: #2470a0;
+  background-color: #86C6F4;
   overflow: hidden;
 }
 
@@ -39,19 +39,18 @@ iframe {
 #viz1686081324686,
 #viz1686081480557,
 #viz1686081549663 {
-  position: relative; 
-  left: 300px; 
-  width: 50%; 
-  height: 850px; 
+  position: relative;
+  left: 36%;
+  width: 50%;
   overflow: hidden;
-
+  top: -700px;
 
   /* width: 1600px !important; */
-  top: -650px;
+  /* bottom: 100%; */
   /* left: 50px; */
   /* position: none !important; */
   /* display: inline !important; */
-  height: 750px !important;
+  height: 650px !important;
 }
 
 /* .tableauPlaceholder {
@@ -117,12 +116,13 @@ h6,
 }
 
 .picture {
-  margin-top: -85%;
+  margin-top: -80%;
   position: relative;
 }
 
 .headtext {
-  margin-top: -550px;
+  top: -1040%;
+  position: relative;
   color: white;
   position: relative;
 }
@@ -132,19 +132,19 @@ h6,
 }
 
 #myDiv {
-  width: 500px;
+  width: 130%;
   height: 500px;
-  background-color: #2470a0;
+  background-color: #86C6F4;
   /* z-index: 0; */
 }
 
 .svg-container {
-  left: -100px;
-  color: white !important;
+  left: -20%;
+  /* color: red !important; */
 }
 
 rect {
-  fill: #2470a0 !important;
+  fill: #86C6F4 !important;
   /* fill-opacity: 1; */
 }
 
@@ -174,6 +174,12 @@ rect {
 
 .content {
   margin-top: 25%;
+  padding-top: 5%;
+}
+
+.map-header {
+  top: 20%;
+  position: relative;
 }
 
 #us-map1,
@@ -187,7 +193,7 @@ rect {
 }
 
 #plantDetails {
-  top: 40%;
+  top: 20%;
   left: 0%;
   position: relative;
   /* display: block; */
