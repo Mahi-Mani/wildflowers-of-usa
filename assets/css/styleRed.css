@@ -145,7 +145,7 @@ i {
 }
 
 #myDiv {
-  width: 700px;
+  width: 130%;
   height: 500px;
   background-color: #86C6F4;
   /* z-index: 0; */
