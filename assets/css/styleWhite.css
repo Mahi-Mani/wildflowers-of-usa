@@ -1,6 +1,6 @@
 body {
   background-color: #2470a0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .heading,
@@ -185,7 +185,7 @@ rect {
 }
 
 .content {
-  margin-top: 25%;
+  margin-top: 20%;
   padding-top: 5%;
 }
 

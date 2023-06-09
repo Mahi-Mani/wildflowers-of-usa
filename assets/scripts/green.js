@@ -354,10 +354,10 @@ $(document).ready(function () {
       // $(".text_display").css("top","-2000px");
       $(".content").removeAttr("style");
       // $(".ex-flower").removeAttr("style");
-      $(".content").css("margin-top", "10%");
+      $(".content").css("margin-top", "7%");
       $(".picture").css("margin-top", "0%");
       $(".headtext").css("margin-top", "0%");
-      $(".headtext").css("top", "450%");
+      $(".headtext").css("top", "375%");
     }
 
     $("path").removeAttr("style");
