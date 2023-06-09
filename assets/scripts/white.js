@@ -2442,7 +2442,7 @@ $(document).ready(function () {
       if (stateArr[i].length == 2) {
         console.log(stateArr[i]);
         $("#" + stateArr[i]).css({
-          "fill": "white"
+          "fill": "grey"
         });
       }
     }
