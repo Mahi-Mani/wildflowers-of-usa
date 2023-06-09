@@ -1415,6 +1415,7 @@ $(document).ready(function () {
 
     var data = [{
       type: 'choropleth',
+      showlegend: false,
       locationmode: 'USA-states',
       locations: unpack(rows, 'State'),
       z: unpack(rows, 'Red'),
@@ -1433,8 +1434,8 @@ $(document).ready(function () {
 
     var layout = {
       title: '<b>Distribution of <i>Red</i> flowers</b>',
-      paper_bgcolor: "rgba(0,0,0,0)",
-      plot_bgcolor: "rgba(0,0,0,0)",
+      paper_bgcolor: "#86C6F4",
+      plot_bgcolor: "#86C6F4",
       geo: {
         scope: 'usa'
       }

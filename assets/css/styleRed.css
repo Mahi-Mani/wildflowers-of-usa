@@ -1,6 +1,6 @@
 body {
   background-color: #86C6F4;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .heading,
@@ -145,7 +145,7 @@ i {
 }
 
 #myDiv {
-  width: 500px;
+  width: 700px;
   height: 500px;
   background-color: #86C6F4;
   /* z-index: 0; */
@@ -153,11 +153,12 @@ i {
 
 .svg-container {
   left: -20%;
-  color: red !important;
+  /* color: red !important; */
 }
 
 rect {
   fill: #86C6F4 !important;
+  color: #86C6F4 !important;
   /* fill-opacity: 1; */
 }
 
