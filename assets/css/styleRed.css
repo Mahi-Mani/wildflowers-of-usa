@@ -43,12 +43,11 @@ iframe {
 #viz1686081480557,
 #viz1686081549663 {
   position: relative;
-  left: 300px;
+  left: 26%;
   width: 50%;
   height: 850px;
   overflow: hidden;
   top: -650px;
-  padding-bottom: 5%;
 
   /* width: 1600px !important; */
   /* bottom: 100%; */
@@ -122,12 +121,13 @@ h6,
 }
 
 .picture {
-  margin-top: -85%;
+  margin-top: -90%;
   position: relative;
 }
 
 .headtext {
-  margin-top: -550px;
+  top: -700px;
+  position: relative;
   color: #FF033E;
   position: relative;
 }
@@ -179,6 +179,7 @@ rect {
 
 .content {
   margin-top: 25%;
+  padding-top: 5%;
 }
 
 #us-map1,
