@@ -1410,7 +1410,6 @@ $(document).ready(function () {
   // Choropleth map code
   d3.csv('https://raw.githubusercontent.com/Mahi-Mani/projectdv/main/Color_State_data.csv', function (err, rows) {
     function unpack(rows, key) {
-      console.log(rows);
       return rows.map(function (row) { return row[key]; });
     }
 
@@ -1426,21 +1425,57 @@ $(document).ready(function () {
         [0, 'rgb(252,152,177)'], [0, 'rgb(251,117,151)'],
         [0.4, 'rgb(250,90,131)'], [0.6, 'rgb(249,62,110)'],
         [0.8, 'rgb(245,35,89)'], [1, 'rgb(253, 186, 203)']
-      ]
+      ],
+      autocolorscale: false,
+      reversescale: true
     }];
+
+
     var layout = {
-      color: "red",
+      title: '<b>Distribution of <i>Red</i> flowers</b>',
       paper_bgcolor: "rgba(0,0,0,0)",
-      // plot_bgcolor: "lightblue",
+      plot_bgcolor: "rgba(0,0,0,0)",
       geo: {
         scope: 'usa'
-      },
-      font: 'rgb(0,0,0,0)',
-      color: "white"
+      }
     };
 
     Plotly.newPlot("myDiv", data, layout, { showLink: false });
   });
+  // d3.csv('https://raw.githubusercontent.com/Mahi-Mani/projectdv/main/Color_State_data.csv', function (err, rows) {
+  //   function unpack(rows, key) {
+  //     console.log(rows);
+  //     return rows.map(function (row) { return row[key]; });
+  //   }
+
+  //   var data = [{
+  //     type: 'choropleth',
+  //     locationmode: 'USA-states',
+  //     locations: unpack(rows, 'State'),
+  //     z: unpack(rows, 'Red'),
+  //     text: unpack(rows, 'State'),
+  //     zmin: 0,
+  //     zmax: 300,
+  //     colorscale: [
+  //       [0, 'rgb(252,152,177)'], [0, 'rgb(251,117,151)'],
+  //       [0.4, 'rgb(250,90,131)'], [0.6, 'rgb(249,62,110)'],
+  //       [0.8, 'rgb(245,35,89)'], [1, 'rgb(253, 186, 203)']
+  //     ]
+  //   }];
+  //   var layout = {
+  //     title: "<b>Distribution of <i>Red</i> flowers</b>",
+  //     color: "red",
+  //     paper_bgcolor: "rgba(0,0,0,0)",
+  //     // plot_bgcolor: "lightblue",
+  //     geo: {
+  //       scope: 'usa'
+  //     },
+  //     font: 'red',
+  //     color: "white"
+  //   };
+
+  //   Plotly.newPlot("myDiv", data, layout, { showLink: false });
+  // });
 
   var displayFlowers = [];
   var chosenFamily = [];
@@ -1532,7 +1567,7 @@ $(document).ready(function () {
     var previousZoneArr = JSON.parse(previousZone);
     zoneArr.push(zone);
     localStorage.setItem("zone", JSON.stringify(zoneArr));
-    $(".headtext").text(`More plants for you!`);
+    $(".headtext").text(`More wildflowers for you!`);
     $("#plantDetails").show();
     $("#plantDetails").empty();
     $("#plantDetails").append(`<ol class="list-group list-group-numbered">
