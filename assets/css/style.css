@@ -7,6 +7,11 @@
   width: 80px;
 }
 
+/* .pick {
+  bottom: 0%;
+  position: relative;
+} */
+
 body {
   background-image: url('https://wallpaperaccess.com/full/3544015.jpg');
   background-size: cover;
