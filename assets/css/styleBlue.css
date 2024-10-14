@@ -196,10 +196,10 @@ rect {
 .mapspace {
   display: block;
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: 0%;
   width: 50%;
-  height: 50%;
+  height: 100%;
 }
 
 #plantDetails {
