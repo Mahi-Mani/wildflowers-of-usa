@@ -121,7 +121,7 @@ h6,
 }
 
 .map-header {
-  top: 20%;
+  top: 10%;
   position: relative;
 }
 
@@ -130,15 +130,16 @@ i {
 }
 
 .picture {
-  margin-top: -80%;
-  position: relative;
+  display: block;
+  /* position: relative; */
+  margin-top: -75%;
 }
 
 .headtext {
-  top: -1040%;
-  position: relative;
+  margin-top: -165%;
+  /* position: relative; */
   color: #00308F;
-  position: relative;
+  /* position: relative; */
 }
 
 .picture:hover .pic_transform {
@@ -192,20 +193,29 @@ rect {
   padding-top: 5%;
 }
 
-#us-map1,
-.mapspace {
-  display: block;
-  position: absolute;
-  top: 10%;
+svg#us-map1 {
+  /* display: block; */
+  /* position: absolute; */
+  top: 20%;
   left: 0%;
   width: 50%;
   height: 100%;
 }
 
+.mapspace {
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 50%;
+  height: 100%;
+}
+
 #plantDetails {
-  top: 20%;
+  top: 10%;
   left: 0%;
   position: relative;
+  height: 425px;
   /* display: block; */
 }
 
